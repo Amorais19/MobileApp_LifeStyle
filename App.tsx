@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Page1 } from './src/screens/Page1';
+import { Page2 } from './src/screens/Page2';
+import { Page3 } from './src/screens/Page3';
+import { Page4 } from './src/screens/Page4';
+import { Dispatch, SetStateAction, useState } from 'react'
+import { useFonts, Slackey_400Regular } from '@expo-google-fonts/slackey';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+export interface IPagina {
+  setPageI: Dispatch<SetStateAction<number>>
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  const [page, setPage] = useState(1)
+  const [fontsLoaded] = useFonts({
+    Slackey_400Regular
+  });
+  if (!fontsLoaded) {
+    return null;
+  }
+  
+  if (page == 1) {
+    return <Page1 setPageI={setPage} />
+  } else if (page == 2) {
+    return <Page2 setPageI={setPage} />
+  } else if (page == 3) {
+    return <Page3 setPageI={setPage} />
+  } else {
+    return <Page4 setPageI={setPage} />
+  }
+};
