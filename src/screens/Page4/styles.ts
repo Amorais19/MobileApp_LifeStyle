@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
     conteudo: {
         flex: 0.5,
         alignItems: 'center',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
+        paddingBottom: 40
     },
     title: {
         fontFamily: 'Slackey_400Regular',
@@ -24,9 +25,13 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 24
     },
-    textnegrito: {
+    textfont: {
         color: colors.white,
         fontFamily: 'Slackey_400Regular'
+    },
+    cont: {
+        marginBottom: -30,
+        paddingBottom: -20
     },
     botoes: {
         flexDirection: 'row',
@@ -35,4 +40,16 @@ export const styles = StyleSheet.create({
     botao: {
         paddingHorizontal: 15
     },
+    botaoregis: {
+        color: colors.white,
+        fontSize: 25
+    },
+    textentrar: {
+        color: colors.white,
+        textAlign: 'center',
+        paddingTop: 5
+    },
+    textnegrito: {
+        fontWeight: '600'
+    }
 });

@@ -1,5 +1,5 @@
 import { ImageBackground, View, Text, Image } from "react-native";
-import { ButtonSlide } from "../../components/ButtonSlide";
+import { ButtonSlide, ButtonSlides } from "../../components/ButtonSlide";
 import { styleContainer } from "../../styles/globalstyles";
 import { styles } from "./styles"
 import { IPagina } from "../../../App";
@@ -11,8 +11,14 @@ export function Page4({ setPageI }: IPagina) {
             <View style={styles.flex}>
                 <View style={styles.conteudo}>
                     <Text style={styles.title}>Life Style</Text>
-                    <Text style={styles.texto}>Seja bem-vindo ao <Text style={styles.textnegrito}>Life Style</Text>!
-Aqui você consegue se manter organizado utilizando nossas mais fáceis ferramentas de uso diário.</Text>
+                    <Text style={styles.texto}>Seja bem-vindo ao <Text style={styles.textfont}>Life Style</Text>!
+                        Aqui você consegue se manter organizado utilizando nossas mais fáceis ferramentas de uso diário.</Text>
+                </View>
+                <View style={styles.cont}>
+                    <ButtonSlides onPressI={() => setPageI(5)}>
+                        <Text style={styles.botaoregis}>Registre-se</Text>
+                    </ButtonSlides>
+                    <Text style={styles.textentrar}>Já possui conta? <Text style={styles.textnegrito}>Entrar</Text></Text>
                 </View>
             </View>
             <View style={styles.botoes}>
