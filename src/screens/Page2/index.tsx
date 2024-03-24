@@ -13,7 +13,7 @@ export function Page2({ setPageI }: IPagina) {
                 <View style={styles.conteudo}>
                     <Text style={styles.title}>Life Style</Text>
                     <Image source={list} />
-                    <Text style={styles.texto}>Organize sua agenda, marque seus compromissos....</Text>
+                    <Text style={styles.texto}>Anote seus afazeres diários, não esqueça suas tarefas....</Text>
                 </View>
             </View>
             <View style={styles.botoes}>

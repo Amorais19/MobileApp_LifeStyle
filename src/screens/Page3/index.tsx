@@ -13,7 +13,7 @@ export function Page3({ setPageI }: IPagina) {
                 <View style={styles.conteudo}>
                     <Text style={styles.title}>Life Style</Text>
                     <Image source={dindin} />
-                    <Text style={styles.texto}>Organize sua agenda, marque seus compromissos....</Text>
+                    <Text style={styles.texto}>Cuide do seu financeiro, controle seus gastos....</Text>
                 </View>
             </View>
             <View style={styles.botoes}>
